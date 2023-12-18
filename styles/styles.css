@@ -42,10 +42,17 @@ body{
   margin: 0 auto;
 }
 
+.navigation-list{
+  list-style-type: none;
+}
+
+.social-list{
+  list-style-type: none;
+}
+
 .navigation-link{
   color:#000000;
   background-color: #ffffff;
-  font-family: PT Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +62,6 @@ body{
 }
 
 .button{
-  font-family: PT Sans;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -129,7 +135,6 @@ body{
   color:#333333;
   background-color: #ffffff;
   text-align: center;
-  font-family: PT Sans;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -141,7 +146,6 @@ body{
   color:#333333;
   background-color: #ffffff;
   text-align: center;
-  font-family: PT Sans;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -156,9 +160,29 @@ body{
   color:#ffffff;
 }
 
-.advantages-town-title{
+.advantages-town-list{
   text-align: center;
-  font-family: PT Sans;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages-town-item{
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-town-item:nth-child(even){
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-town-item-extended{
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantages-town-title{
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -167,33 +191,20 @@ body{
 }
 
 .advantages-town-subtitle{
-  text-align: center;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
 }
 
-.advantages-town-item{
-  color: #000000;
-  background-color: rgba(131, 179, 211, 0.12);
+.advantages-service-list{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-
-.advantages-town-item-invert{
-  color: #000000;
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-town-item-extended{
-  color: #ffffff;
-  background-color: #82b3d3;
-}
-
 .advantages-service-title{
   color: #000000;
-  text-align: center;
-  font-family: PT Sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -203,19 +214,17 @@ body{
 
 .advantages-service-subtitle{
   color: #333;
-  text-align: center;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
 }
 
-.advantages-service-item{1
+.advantages-service-item{
   background-color: #83b3d31f;
 }
 
-.advantages-service-item-invert{
+.advantages-service-item:nth-child(even){
   background-color:#ffffff;
 }
 
@@ -223,7 +232,6 @@ body{
   color: #000000;
   background-color:#ffffff;
   text-align: center;
-  font-family: PT Sans;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -237,18 +245,24 @@ body{
   width: 1200px;
 }
 
+.breadcrumbs{
+  list-style-type: none;
+}
+
 .breadcrumbs-link{
   color: #ffffff;
-  font-family: PT Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
 }
 
+.hotels-filter-list{
+  list-style-type: none;
+}
+
 .hotels-filter-title{
   color: #ffffff;
-  font-family: PT Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -265,7 +279,6 @@ body{
 }
 .catalog-filter-input{
   color: #000000;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -274,17 +287,20 @@ body{
 
 .sorting-hotels-direction{
   color: #333333;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
 }
 
+
+.hotels-list{
+  list-style-type: none;
+}
+
 .hotel-card-title{
   color: #000000;
   background-color: #ffffff;
-  font-family: PT Sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -294,7 +310,6 @@ body{
 hotel-card-type{
   color: #000000;
   background-color:#ffffff;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -305,7 +320,6 @@ hotel-card-type{
   color: #000000;
   background-color: #ffffff;
   text-align: right;
-  font-family: PT Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -316,7 +330,6 @@ hotel-card-type{
   color: #ffffff;
   background-color: #756157;
   text-align: center;
-  font-family: PT Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -328,7 +341,6 @@ hotel-card-type{
   color: #333333;
   background-color: #f2f2f2;
   text-align: center;
-  font-family: PT Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -336,11 +348,13 @@ hotel-card-type{
   text-transform: uppercase;
 }
 
+.pagination{
+  list-style-type: none;
+}
 .pagination-btn{
   color: #ffffff;
   background-color: #82b3d3;
   text-align: center;
-  font-family: PT Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
