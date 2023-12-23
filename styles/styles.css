@@ -270,7 +270,18 @@ body {
   object-fit: cover;
 }
 
+.advantages-service-item-context {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  min-height: 385px;
+  padding: 80px;
+}
+
 .advantages-service-list {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   margin: 0;
   padding: 0;
