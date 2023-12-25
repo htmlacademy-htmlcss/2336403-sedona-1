@@ -22,6 +22,7 @@
 html {
   height: 100%;
 }
+
 body {
   color:#333333;
   background-color:#f2f2f2;
@@ -655,6 +656,14 @@ body {
   align-items: center;
   padding: 0;
   margin-bottom: 40px;
+}
+
+.sorting-hotels-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 522px;
+  gap: 70px;
 }
 
 .sorting-hotels-direction {
