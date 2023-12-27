@@ -23,6 +23,8 @@ html {
   height: 100%;
 }
 
+/* --- BODY ---  */
+
 body {
   color:#333333;
   background-color:#f2f2f2;
@@ -59,6 +61,8 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+
+/* -- FOOTER --*/
 
 .navigation {
   display: flex;
@@ -118,7 +122,13 @@ body {
   padding: 19px 16px;
 }
 
+/* -- BUTTONS --*/
+
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -169,10 +179,15 @@ body {
 }
 
 .card-grid-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
+  margin: 0;
+  /*padding: 14px 12px;*/
 }
 
 .card-grid-button-select {
@@ -186,7 +201,10 @@ body {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  padding: 0;
+  margin: 0;
 }
+
 .button-subscribe {
   width: 232px;
   height: 52px;
@@ -198,6 +216,10 @@ body {
 .social-button {
   padding: 0 10px;
 }
+
+
+
+/* -- END BUTTONS -- */
 
 .subscribe {
   background-image: url("../images/subscribe.jpg");
@@ -507,6 +529,7 @@ body {
   line-height: 40px;
   text-transform: uppercase;
 }
+/* -- КАТАЛОГ -- */
 
 .breadcrumbs {
   display: flex;
@@ -700,7 +723,12 @@ body {
   border: 1px solid #e6e6e6;
 }
 
+.hotel-card-image {
+  margin-bottom: 16px;
+}
 .hotel-card-title {
+  display: flex;
+  justify-content: start;
   color: #000000;
   background-color: #ffffff;
   font-size: 24px;
@@ -708,9 +736,18 @@ body {
   font-weight: 700;
   line-height: 28px;
   margin: 0;
+  margin-bottom: 16px;
 }
 
+.hotel-card-type-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
 .hotel-card-type {
+  display: flex;
   color: #000000;
   background-color:#ffffff;
   font-size: 18px;
@@ -721,9 +758,9 @@ body {
 }
 
 .hotel-card-price {
+  display: flex;
   color: #000000;
   background-color: #ffffff;
-  text-align: right;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -731,7 +768,14 @@ body {
   margin: 0;
 }
 
+.hotel-card-detail-favorites {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .hotel-card-detail-link {
+  display: flex;
   color: #ffffff;
   background-color: #756157;
   text-align: center;
