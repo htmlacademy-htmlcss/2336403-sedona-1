@@ -96,7 +96,7 @@ body {
 }
 
 .navigation-user {
-  display: flex;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   padding: 22px 12px;
@@ -111,6 +111,7 @@ body {
   justify-content: space-between;
 }
 
+
 .navigation-link {
   color:#000000;
   background-color: #ffffff;
@@ -122,6 +123,29 @@ body {
   text-transform: capitalize;
   justify-content: center;
   padding: 19px 16px;
+}
+
+.navigation-link-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 64px;
+}
+
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #756257;
 }
 
 /* -- BUTTONS -- */
@@ -215,7 +239,11 @@ body {
 }
 
 .social-button {
-  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
 }
 
 .button-hotel-card {
@@ -716,8 +744,9 @@ body {
   flex-direction:row;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0;
+  padding-bottom: 40px;
   margin: 0 0 40px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 /* -- HOTEL CARD -- */
@@ -833,10 +862,6 @@ body {
   padding: 8px 10px;
 }
 /* -- END OF HOTEL CARD --*/
-
-.divider {
-  height: 80px;
-}
 
 .pagination {
   display: flex;
