@@ -460,7 +460,7 @@ body {
 .advantages-service-item-context {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 400px;
   min-height: 385px;
   padding: 80px;
