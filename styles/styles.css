@@ -238,15 +238,36 @@ body {
 }
 /*-- END OF BUTTON SECONDARY --*/
 
+/*-- BUTTON TERTIARY --*/
 .button-tertiary {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
 }
 
+.button-tertiary:hover {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+.button-tertiary:active {
+  color: rgba(255, 255, 255, 0.30);
+}
+/*-- END OF BUTTON TERTIARY --*/
+
+/*-- BUTTON QUATERNARY --*/
 .button-quaternary {
   color: #ffffff;
   background-color: #7db54f;
 }
+
+.button-quaternary:hover {
+  background-color: #6c9e42;
+}
+
+.button-quaternary:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #7db54f;
+}
+/*-- END OF BUTTON QUARTERNARY --*/
 
 .button-header {
   margin-left: 20px;
@@ -268,6 +289,10 @@ body {
   margin: 0;
 }
 
+.card-grid-button:hover,
+.card-grid-button:active  {
+  border-color: #000000;
+}
 .card-grid-button-select {
   width: 48px;
   height: 48px;
@@ -425,17 +450,6 @@ body {
   height: 2px;
   background: #756257;
 }
-
-/*.advantage-town-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 1);
-  margin: 0 auto;
-  margin-top: 30px;
-  outline: 2px solid red;
-}*/
 
 .advantage-service-title {
   width: 505px;
@@ -725,6 +739,7 @@ body {
 /* -- КАТАЛОГ -- */
 .breadcrumbs {
   display: flex;
+  flex-direction: row;
   list-style-type: none;
   gap: 10px;
   padding: 0;
@@ -980,6 +995,20 @@ body {
   align-items: center;
 }
 
+.hotel-card-link-to-button:hover {
+  background-color: #615048;
+}
+
+.hotel-card-link-to-button:active {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #756157;
+}
+
+.hotel-card-link-to-button:disabled {
+  color: rgba(255, 255, 255, 0.30);
+  background-color: #e5e5e5;
+}
+
 .hotel-card-star {
   width: 106px;
   min-height: 17px;
@@ -1056,4 +1085,14 @@ body {
 .pagination-button-fake {
   color: #000000;
   background-color:#ffffff;
+}
+
+.pagination-button[href]:hover {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-button[href]:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.30);
 }
