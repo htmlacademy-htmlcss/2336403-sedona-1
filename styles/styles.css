@@ -440,17 +440,6 @@ body {
   margin-bottom: 25px;
 }
 
-.advantage-town-title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  display: block;
-  outline: 1px solid red;
-  height: 2px;
-  background: #756257;
-}
-
 .advantage-service-title {
   width: 505px;
   margin-bottom: 20px;
