@@ -501,6 +501,7 @@ body {
 }
 
 .advantages-town-item-context {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -524,6 +525,7 @@ body {
 }
 
 .advantages-town-title {
+  position: relative;
   margin: 0;
   margin-bottom: 62px;
   font-size: 24px;
@@ -531,6 +533,21 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.advantages-town-title:after{
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+  bottom: -30px;
+}
+
+.advantages-town-item-extended .advantages-town-title:after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-town-subtitle {
