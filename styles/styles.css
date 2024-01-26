@@ -384,9 +384,8 @@ body {
   left: 0;
   right: 0;
   background-color: transparent;
-  background-image: url("/images/hero-mask.svg");
+  background-image: url("../images/hero-mask.svg");
 }
-
 
 .hero {
   text-align: center;
@@ -649,7 +648,6 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-
 
 .search-header-title {
   color: #ffffff;
