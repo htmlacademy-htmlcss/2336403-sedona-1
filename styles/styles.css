@@ -5,6 +5,7 @@
   src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -16,9 +17,12 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,25 +30,16 @@ html {
   height: 100%;
 }
 
-* {
-  text-decoration: none;
-}
-
-html,
 body {
-  margin: 0;
-}
-
-body {
-  color:#333333;
-  background-color:#f2f2f2;
+  color: #333333;
+  background-color: #f2f2f2;
   font-family: "PT Sans", "Arial", "Verdana", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -60,91 +55,47 @@ body {
   overflow: hidden;
 }
 
-/*Убрать стрелочки в input*/
-/* Chrome:*/
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/*Это для браузера Firefox:*/
-input[type="number"] {
-  appearance: textfield;
-}
-
-input[type="number"]:hover,
-input[type="number"]:focus {
-  appearance: number-input;
-}
-
-/*Для других*/
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/*Убрать стрелочки в инпут*/
-
-.main-container {
-  flex-grow: 1;
-}
-
 .container {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   width: 1200px;
   margin: 0 auto;
 }
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
-  width: 1200px;
+  width: 1060px;
   margin: 0 auto;
-  padding: 0 70px;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 64px;;
 }
 
-.page-header {
-  position: relative;
-  /*z-index: 1;*/
-}
 .page-header-logo {
-  width: 140px;
   margin-right: 30px;
+  margin-bottom: -6px;
   z-index: 1;
 }
 
 .page-header-logo-pic {
   display: block;
-  margin-bottom: -6px;
 }
 
-.navigation-list {
+.navigation-menu {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
-}
-
-.navigation-content {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px 16px;
 }
 
-.navigation-user {
+.navigation-menu-user {
   margin-left: auto;
 }
 
 .navigation-link {
-  color:#000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
   background-color: #ffffff;
   font-size: 20px;
   font-style: normal;
@@ -152,21 +103,53 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 24px;
   text-align: center;
   text-transform: capitalize;
-  padding: 19px 16px;
+  padding: 20px 16px;
 }
+
+.navigation-link-user {
+  position: relative;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 22px 12px;
+}
+
+
+/* Убрать стрелочки в input */
+/* Chrome: */
+/* input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+/*  Firefox: */
+/* input[type="number"] {
+  appearance: textfield;
+} */
+
+/* input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: number-input;
+} */
+
+/* Для других */
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+/* Убрать стрелочки в инпут */
+
+/* .main-container {
+  flex-grow: 1;
+} */
+
 
 .navigation-link[href]:hover {
   color: #756157;
 }
 
 .navigation-link[href]:active {
-  color: rgba(117, 97, 87, 0.30);
-}
-
-
-.navigation-link-user {
-  position: relative;
-  display: flex;
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-link-user:hover path {
@@ -180,8 +163,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .quantity-of-favorites {
   position: absolute;
-  left: 24px;
-  top: 8px;
+  left: 20px;
+  top: 10px;
   padding: 5px;
   font-weight: 400;
   font-size: 10px;
@@ -191,6 +174,8 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 10px;
   max-width: 50px;
   min-width: 20px;
+  max-height: 20px;
+  overflow: hidden;
 }
 
 .navigation-link-current {
@@ -214,25 +199,26 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-style: normal;
-  font-weight: 700;
-  padding: 8px 10px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
 }
 
-.button-big {
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.button-small {
+.button-header {
+  display: flex;
+  width: 160px;
+  min-height: 36px;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
+  font-weight: 700;
   line-height: 20px;
+  margin-left: 20px;
+  letter-spacing: 0%;
 }
 
-/*-- BUTTON PRIMARY --*/
+
+/* -- BUTTON PRIMARY -- */
 .button-primary {
   color: #ffffff;
   background-color: #756157;
@@ -243,13 +229,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .button-primary:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
-/*-- END OF BUTTON PRIMARY --*/
+/* -- END OF BUTTON PRIMARY -- */
 
 
-/*-- BUTTON SECONDARY --*/
+/* -- BUTTON SECONDARY -- */
 .button-secondary {
   color: #ffffff;
   background-color: #82b3d3;
@@ -260,27 +246,27 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .button-secondary:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
 }
-/*-- END OF BUTTON SECONDARY --*/
+/* -- END OF BUTTON SECONDARY -- */
 
-/*-- BUTTON TERTIARY --*/
+/* -- BUTTON TERTIARY -- */
 .button-tertiary {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .button-tertiary:hover {
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .button-tertiary:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
 }
-/*-- END OF BUTTON TERTIARY --*/
+/* -- END OF BUTTON TERTIARY -- */
 
-/*-- BUTTON QUATERNARY --*/
+/* -- BUTTON QUATERNARY -- */
 .button-quaternary {
   color: #ffffff;
   background-color: #7db54f;
@@ -291,18 +277,23 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .button-quaternary:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
   background-color: #7db54f;
 }
-/*-- END OF BUTTON QUARTERNARY --*/
-
-.button-header {
-  margin-left: 20px;
-  min-width: 160px;
-}
+/* -- END OF BUTTON QUARTERNARY -- */
 
 .button-search-hotels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 376px;
+  min-height: 52px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  letter-spacing: 0%;
 }
 
 .card-grid-button {
@@ -317,9 +308,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .card-grid-button:hover,
-.card-grid-button:active  {
+.card-grid-button:active {
   border-color: #000000;
 }
+
 .card-grid-button-select {
   width: 48px;
   height: 48px;
@@ -337,7 +329,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .button-subscribe {
   width: 232px;
-  height: 52px;
+  min-height: 52px;
   padding: 8px 25px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -371,7 +363,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 1200px;
-  height: 415px;
+  min-height: 415px;
   padding-top:  96px;
   padding-bottom: 104px;
 }
@@ -393,7 +385,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   border-radius: 4px 0 0 4px;
   width: 452px;
-  height: 52px;
+  min-height: 100%;
   padding: 12px 20px;
 }
 
@@ -408,13 +400,14 @@ input[type=number]::-webkit-outer-spin-button {
   background-size: 100% auto;
   color: #ffffff;
   background-color: #333333;
+  padding-bottom: 27px;
 }
 
 .hero-container::after {
   position: absolute;
   display: block;
   content: "";
-  bottom:0;
+  bottom: 0;
   height: 57px;
   left: 0;
   right: 0;
@@ -430,7 +423,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .subscribe-simple {
-  color:#333333;
+  color: #333333;
   background-color: #ffffff;
   text-align: center;
   background-image: none;
@@ -441,7 +434,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .advantages-town-header {
-  padding: 69px 0;
+  padding: 69px 0 89px;
 }
 
 .advantages-service-header {
@@ -450,7 +443,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-title {
   margin: 0 auto;
-  color:#333333;
+  color: #333333;
   text-align: center;
   font-size: 30px;
   font-style: normal;
@@ -461,7 +454,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .section-subtitle {
   margin: 0 auto;
-  color:#333333;
+  color: #333333;
   text-align: center;
   font-size: 22px;
   font-style: normal;
@@ -488,7 +481,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-subtitle-light {
-  color:#ffffff;
+  color: #ffffff;
   padding: 0;
   margin-bottom: 54px;
   width: 475px;
@@ -502,7 +495,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .section-subtitle-dark {
-  color:#000000;
+  color: #000000;
   padding: 0;
   margin-bottom: 54px;
   width: 475px;
@@ -518,6 +511,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0;
   margin: 0;
 }
+
 .advantages-town-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -570,7 +564,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-transform: uppercase;
 }
 
-.advantages-town-title:after{
+.advantages-town-title::after {
   position: absolute;
   content: "";
   width: 60px;
@@ -578,10 +572,10 @@ input[type=number]::-webkit-outer-spin-button {
   left: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   transform: translateX(-50%);
-  bottom: -30px;
+  bottom: -32px;
 }
 
-.advantages-town-item-extended .advantages-town-title:after {
+.advantages-town-item-extended .advantages-town-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -598,10 +592,6 @@ input[type=number]::-webkit-outer-spin-button {
   width: 800px;
   height: 100%;
   object-fit: cover;
-}
-
-.advantages-service-item {
-  padding: 80px 85px 80px 85px;
 }
 
 .advantages-service-item-context {
@@ -675,11 +665,12 @@ input[type=number]::-webkit-outer-spin-button {
   background-size: 100% 100%;
 }
 
-.search-hotels{
+.search-hotels {
   padding: 96px 0;
 }
 
 .search-hotels-container {
+  justify-content: center;
   width: 592px;
   min-height: 214px;
   text-align: center;
@@ -702,27 +693,22 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 54px;
 }
 
-.advantages-service-subtitle {
-  color: #333;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-}
-
 .advantages-service-item {
-  background-color: #83b3d31f;
+  background-color: rgba(131, 179, 211, 0.12);
+  padding: 80px 85px;
 }
 
 .advantages-service-item:nth-child(even) {
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
 .page-footer-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 1200px;
   margin: 0 auto;
-  padding: 40px 70px 30px 70px;
+  padding: 50px 70px 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -730,6 +716,8 @@ input[type=number]::-webkit-outer-spin-button {
 /* -- SOCIAL CONTACTS -- */
 .social-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 142px;
   list-style-type: none;
   padding: 0;
@@ -749,9 +737,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* -- CONTACT-PHONE -- */
+.footer-contact {
+  max-width: 331px;
+  min-height: 40px;
+}
+
 .footer-contact-phone {
   color: #000000;
-  background-color:#ffffff;
+  background-color: #ffffff;
   text-align: center;
   font-size: 40px;
   font-style: normal;
@@ -765,11 +758,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .footer-contact-phone:active {
-  color: rgba(117, 97, 87, 0.30);
+  color: rgba(117, 97, 87, 0.3);
 }
 /* -- END OF CONTACT-PHONE -- */
 
-.develop-link:hover path{
+.develop-link:hover path {
   fill: #756157;
 }
 
