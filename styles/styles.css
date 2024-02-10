@@ -85,6 +85,7 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   align-items: center;
+  max-width: 600px;
 }
 
 .navigation-menu-user {
@@ -304,6 +305,8 @@ input[type="number"]:focus {
 
 .sorting-hotels-buttons {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
   flex-direction: row;
   gap: 8px;
   padding: 0;
@@ -530,7 +533,6 @@ input[type="number"]:focus {
 .advantages-town-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -929,6 +931,7 @@ input[type="number"]:focus {
   padding: 0;
   margin: 0;
   border: none;
+  align-content: flex-start;
 }
 
 .slider-from {
@@ -969,7 +972,7 @@ input[type="number"]:focus {
 }
 
 .range {
-  margin: 34px 0 0;
+  margin: 43px 0 0;
 }
 
 .range-scale {
@@ -1057,18 +1060,19 @@ input[type="number"]:focus {
   align-items: center;
   padding: 0;
   margin-bottom: 40px;
+  max-width: 1060px;
 }
 
 .sorting-hotels-container {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  width: 522px;
-  gap: 70px;
+  min-width: 522px;
 }
 
 .sorting-hotels-direction {
-  width: 100%;
+  min-width: 292px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
   color: #333333;
@@ -1239,6 +1243,7 @@ input[type="number"]:focus {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   list-style-type: none;
   gap: 8px;
@@ -1253,7 +1258,8 @@ input[type="number"]:focus {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  width: 60px;
+  min-width: 60px;
+  padding: 10px;
   height: 60px;
   color: #ffffff;
   background-color: #82b3d3;
