@@ -92,6 +92,10 @@ body {
   margin-left: auto;
 }
 
+.navigation-item {
+  z-index: 1;
+}
+
 .navigation-link {
   display: flex;
   justify-content: center;
@@ -105,7 +109,6 @@ body {
   text-align: center;
   text-transform: capitalize;
   padding: 20px 16px;
-  z-index: 1;
 }
 
 .navigation-link-user {
@@ -365,7 +368,7 @@ input[type="number"]:focus {
   grid-column-start: 1;
   grid-column-end: 5;
   width: 100%;
-  padding: 18px 20px;
+  padding: 17px 20px;
   border-radius: 10px;
   font-size: 20px;
   font-style: normal;
@@ -378,22 +381,31 @@ input[type="number"]:focus {
 
 .subscribe {
   background-image: url("../images/subscribe.jpg");
+  background-color: #312035;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 1200px;
-  min-height: 416px;
-  padding-top: 95px;
+  min-height: 417px;
+  padding-top: 96px;
 }
 
 .subscribe-form {
   display: inline-flex;
   text-align: center;
+  margin-bottom: 100px;
 }
+
+.subscribe-form-simple {
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 105px;
+}
+
 
 .subscribe-container {
   text-align: center;
   width: 684px;
-  min-height: 215px;
+  min-height: 220px;
   margin: 0 auto;
 }
 
@@ -508,7 +520,7 @@ input[type="number"]:focus {
 .section-title-dark {
   color: #000000;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   width: 404px;
 }
 
@@ -611,66 +623,12 @@ input[type="number"]:focus {
   object-fit: cover;
 }
 
-.advantages-service-item-context {
-  display: grid;
-  width: 230px;
-  min-height: 223px;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  row-gap: 30px;
-  justify-items: center;
-  align-items: center;
-}
-
 .advantages-service-list {
   display: grid;
   width: 1200px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   list-style-type: none;
-}
-
-.advantages-service-icon-housing {
-  display: inline-block;
-  width: 75px;
-  height: 72px;
-  background-image: url("../images/motel.svg");
-  background-size: 100% 100%;
-}
-
-.advantages-service-icon-food {
-  display: inline-block;
-  width: 75px;
-  height: 72px;
-  background-image: url("../images/food.svg");
-  background-size: 100% 100%;
-}
-
-.advantages-service-icon-gifts {
-  display: inline-block;
-  width: 75px;
-  height: 72px;
-  background-image: url("../images/gifts.svg");
-  background-size: 100% 100%;
-}
-
-.advantages-service-title {
-  color: #000000;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.advantages-service-subtitle {
-  color: #000000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: center;
 }
 
 .search-filter-container {
@@ -687,37 +645,71 @@ input[type="number"]:focus {
 }
 
 .search-hotels-container {
-  justify-content: center;
   width: 592px;
   min-height: 214px;
   text-align: center;
   margin: 0 auto;
 }
 
-.search-header-title {
-  color: #ffffff;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 78px;
-  margin-bottom: 7px;
-}
-
 .search-hotels-title {
+  display: block;
   margin-bottom: 20px;
 }
 
 .search-hotels-subtitle {
-  margin-bottom: 57px;
+  margin-bottom: 55px;
 }
 
 .advantages-service-item {
+  width: 400px;
+  min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
-  padding: 80px 85px;
+  padding: 185px 85px 40px;
 }
 
 .advantages-service-item:nth-child(even) {
   background-color: #ffffff;
+}
+
+.advantages-service-title {
+  color: #000000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.advantages-service-subtitle {
+  color: #000000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+}
+
+.housing {
+  background-image: url("../images/motel.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
+}
+
+.food {
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 82px;
+}
+
+.gifts {
+  background-image: url("../images/gifts.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 82px;
 }
 
 .page-footer-container {
@@ -756,11 +748,17 @@ input[type="number"]:focus {
 
 /* -- CONTACT-PHONE -- */
 .footer-contact {
-  max-width: 331px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  max-width: 335px;
   min-height: 40px;
 }
 
+
 .footer-contact-phone {
+  display: block;
   color: #000000;
   background-color: #ffffff;
   text-align: center;
@@ -780,6 +778,10 @@ input[type="number"]:focus {
 }
 /* -- END OF CONTACT-PHONE -- */
 
+.develop-link {
+  display: contents;
+}
+
 .develop-link:hover path {
   fill: #756157;
 }
@@ -789,7 +791,19 @@ input[type="number"]:focus {
   fill-opacity: 0.3;
 }
 
+.develop-link:focus path {
+  fill: #756157;
+}
+
+
 /* -- КАТАЛОГ -- */
+.search-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  margin-bottom: 7px;
+}
+
 .breadcrumbs {
   display: flex;
   flex-direction: row;
@@ -1102,11 +1116,11 @@ input[type="number"]:focus {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 19px 20px;
   margin: 0;
   margin-bottom: 39px;
   border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 39px;
+  padding-bottom: 40px;
 }
 
 /* -- HOTEL CARDS -- */
@@ -1119,6 +1133,7 @@ input[type="number"]:focus {
   padding: 20px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
+  align-items: center;
 }
 
 .hotel-card-link {
@@ -1177,8 +1192,11 @@ input[type="number"]:focus {
   border-radius: 4px;
   background-color: #756157;
   min-width: 140px;
+  min-height: 36px;
   justify-content: center;
   align-items: center;
+  padding: 5px 10px;
+  word-wrap: break-word;
 }
 
 .hotel-card-link-to-button:hover {
@@ -1307,9 +1325,10 @@ input[type="number"]:focus {
 }
 
 .modal {
+  display: block;
   position: relative;
   width: 717px;
-  min-height: 576px;
+  min-height: 44px;
   margin: auto;
   padding: 64px 70px;
   font-size: 18px;
@@ -1318,17 +1337,6 @@ input[type="number"]:focus {
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.15);
-}
-
-.modal-title {
-  margin: 0 0 74px;
-  text-align: left;
-  color: #000000;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  text-transform: uppercase;
 }
 
 .modal-close-button {
@@ -1367,15 +1375,27 @@ input[type="number"]:focus {
 .modal-search-form {
   display: grid;
   grid-template-columns: 137px 197px 133px 110px;
-  grid-auto-rows: auto;
+}
+
+.modal-title {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 0 0 64px;
+  text-align: left;
+  color: #000000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
 }
 
 .modal-info {
   grid-column-start: 2;
   grid-column-end: 5;
-  min-height: 48px;
-  margin: 0;
-  padding: 2px 20px 0;
+  margin-bottom: 20px;
+  padding: 4px 20px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -1417,7 +1437,6 @@ input[type="number"]:focus {
 .button-plus-minus {
   display: flex;
   align-self: center;
-  margin: 0;
   height: 48px;
 }
 
@@ -1523,7 +1542,6 @@ input[type="number"]:focus {
   font: inherit;
   font-size: 18px;
   line-height: 24px;
-  text-transform: capitalize;
   text-align: left;
   color: #000000;
   background-color: #f2f2f2;

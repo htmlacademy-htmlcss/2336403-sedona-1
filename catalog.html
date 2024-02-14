@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy : Седона : Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
@@ -14,7 +13,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
   <div class="container">
     <!-- HEADER -->
@@ -34,7 +32,6 @@
             <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
-
         <ul class="navigation-menu navigation-menu-user">
           <li class="navigation-item">
             <a class="navigation-link navigation-link-user" href="#">
@@ -54,12 +51,13 @@
             </a>
           </li>
           <li class="navigation-item">
-            <button class="button button-primary button-header" type="button">Хочу сюда!</button>
+            <form action="#">
+              <button class="button button-primary button-header" type="submit">Хочу сюда!</button>
+            </form>
           </li>
         </ul>
       </nav>
     </header>
-
     <!-- MAIN -->
     <main class="main-catalog-page">
       <section class="search-filter-container">
@@ -84,7 +82,6 @@
               </li>
             </ul>
         </header>
-
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter-item">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -112,7 +109,6 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="filter-item">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
@@ -139,7 +135,6 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="catalog-slider">
             <legend class="slider-title catalog-filter-title">Стоимость, ₽:</legend>
             <label class="slider-from">
@@ -163,14 +158,12 @@
               </div>
             </div>
           </fieldset>
-
           <div class="catalog-filter-button">
             <button class="button button-secondary filter-button" type="submit">Применить</button>
             <button class="button button-tertiary reset-button" type="reset">Сбросить</button>
           </div>
         </form>
       </section>
-
       <section class="hotels">
         <div class="sorting-hotels">
           <h2 class="search-catalog-title">Найдено гостиниц: <span>4</span></h2>
@@ -197,7 +190,6 @@
             </div>
           </div>
         </div>
-
         <ul class="hotels-list">
           <li class="hotel-item">
             <a class="hotel-card-link" href="#">
@@ -217,7 +209,6 @@
             </p>
             <p class="hotel-card-rating">Рейтинг: 8,5</p>
           </li>
-
           <li class="hotel-item">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-image" src="images/hotel-2.jpg" alt="Отель Villas at Poco Diablo" width="300" height="212">
@@ -234,9 +225,8 @@
             <p class="hotel-card-star star-4">
               <span class="visually-hidden">4 звезды</span>
             </p>
-            <p class="hotel-card-rating">Рейтинг: 9,2 </p>
+            <p class="hotel-card-rating">Рейтинг: 9,2</p>
           </li>
-
           <li class="hotel-item">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-image" src="images/hotel-3.jpg" alt="Отель Desert Quail Inn" width="300" height="212">
@@ -255,7 +245,6 @@
             </p>
             <p class="hotel-card-rating">Рейтинг: 6,9</p>
           </li>
-
           <li class="hotel-item">
             <a class="hotel-card-link" href="#">
               <img class="hotel-card-image" src="images/hotel-4.jpg" alt="Отель GreenTree Inn" width="300" height="212">
@@ -275,7 +264,6 @@
             <p class="hotel-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
-
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-button pagination-button-current">1</a>
@@ -297,12 +285,11 @@
           </li>
         </ul>
       </section>
-
       <section class="subscribe subscribe-simple">
         <div class="subscribe-container">
           <h2 class="section-title section-title-dark">Подпишитесь на рассылку</h2>
           <p class="section-subtitle section-subtitle-dark">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="subscribe-form-simple" action="https://echo.htmlacademy.ru/" method="post">
               <label>
                 <span class="visually-hidden">email</span>
                 <input class="subscribe-field subscribe-field-simple" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
@@ -312,12 +299,9 @@
           </div>
           </section>
         </main>
-
     <!-- FOOTER -->
     <footer class="page-footer">
-
       <div class="page-footer-container">
-
         <ul class="social-list">
           <li class="social-item">
             <a class="social-button button-vk" href="https://vk.com/htmlacademy">
@@ -344,11 +328,11 @@
             </a>
             </li>
         </ul>
-
-        <p class="footer-contact">
-          <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </p>
-
+        <div class="footer-contact">
+          <p>
+            <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </p>
+        </div>
         <a class="develop-link" href="htmlacademy.ru">
           <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34" fill="none">
             <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
@@ -366,9 +350,7 @@
           </svg>
           <span class="visually-hidden">Логотип разработчика</span>
         </a>
-
       </div>
-
     </footer>
   </div>
 </body>

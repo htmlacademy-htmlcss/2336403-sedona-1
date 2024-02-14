@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>HTML Academy : Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
@@ -14,9 +13,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-
   <body>
-    <div class="container">
+    <d class="container">
       <!-- HEADER -->
       <header class="page-header">
         <nav class="navigation">
@@ -54,12 +52,13 @@
               </a>
             </li>
             <li class="navigation-item">
-              <button class="button button-primary button-header" type="button">Хочу сюда!</button>
+              <form action="#">
+                <button class="button button-primary button-header" type="submit">Хочу сюда!</button>
+              </form>
             </li>
           </ul>
         </nav>
       </header>
-
       <!-- MAIN -->
       <main class="main-page">
         <section class="hero-container">
@@ -68,7 +67,6 @@
             <img src="images/welcome.svg" alt="Welcome to the gorgeous Sedona" width="458" height="352">
           </div>
         </section>
-
         <section class="advantages-town">
           <div class="advantages-town-header">
             <h2 class="section-title advantage-town-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -82,28 +80,24 @@
               </div>
               <img class="advantages-town-img" src="images/advantage-1.jpg" alt="Городской пейзаж" width="800" height="384">
             </li>
-
             <li class="advantages-town-item">
               <div class="advantages-town-item-context">
                 <h3 class="advantages-town-title">Небольшая<br>площадь</h3>
                 <p class="advantages-town-subtitle">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
-
             <li class="advantages-town-item">
               <div class="advantages-town-item-context">
                 <h3 class="advantages-town-title">Красивая<br>дорога</h3>
                 <p class="advantages-town-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
-
             <li class="advantages-town-item">
               <div class="advantages-town-item-context">
                 <h3 class="advantages-town-title">Мало<br>туристов</h3>
                 <p class="advantages-town-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
-
             <li class="advantages-town-item-extended">
               <img class="advantages-town-img" src="images/advantage-2.jpg" alt="Природный пейзаж" width="800" height="384">
               <div class="advantages-town-item-context">
@@ -113,54 +107,38 @@
             </li>
           </ul>
         </section>
-
         <section class="advantage-service">
           <div class="advantages-service-header">
             <h2 class="visually-hidden">Преимущества услуг туристического городка Седона</h2>
             <p class="section-title advantage-service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
             <p class="section-subtitle">Опытный персонал и качественное обслуживание!</p>
           </div>
-
           <ul class="advantages-service-list">
-            <li class="advantages-service-item">
-              <div class="advantages-service-item-context">
-                <span class="advantages-service-icon-housing"></span>
+            <li class="advantages-service-item housing">
                 <h3 class="advantages-service-title">Жильё</h3>
                 <p class="advantages-service-subtitle">Рекомендуем пожить в&nbsp;настоящем мотеле, всё&nbsp;как&nbsp;в&nbsp;кино!</p>
-              </div>
             </li>
-            <li class="advantages-service-item">
-              <div class="advantages-service-item-context">
-                <span class="advantages-service-icon-food"></span>
+            <li class="advantages-service-item food">
                 <h3 class="advantages-service-title">Еда</h3>
-                <p class="advantages-service-subtitle">
-                  Всегда заказывайте топовый&nbsp;фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!
-                </p>
-              </div>
+                <p class="advantages-service-subtitle">Всегда заказывайте топовый&nbsp;фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
             </li>
-
-            <li class="advantages-service-item">
-              <div class="advantages-service-item-context">
-                <span class="advantages-service-icon-gifts"></span>
+            <li class="advantages-service-item gifts">
                 <h3 class="advantages-service-title">Сувениры</h3>
                 <p class="advantages-service-subtitle">Не только китайского, но&nbsp;и&nbsp;настоящего местного производства!</p>
-              </div>
             </li>
-
-
           </ul>
         </section>
-
         <section class="search-hotels">
           <div class="search-hotels-container">
             <h2 class="section-title search-hotels-title">Заинтересовались?</h2>
             <p class="section-subtitle search-hotels-subtitle">
               Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Седоне
             </p>
-            <button class="button button-primary button-search-hotels" type="button">Поиск гостиницы в седоне</button>
+            <form action="modal.html">
+              <button class="button button-primary button-search-hotels" type="submit">Поиск гостиницы в седоне</button>
+            </form>
           </div>
         </section>
-
         <section class="subscribe">
           <div class="subscribe-container">
             <h2 class="section-title section-title-light">Подпишитесь на рассылку</h2>
@@ -175,7 +153,6 @@
           </div>
         </section>
       </main>
-
       <!-- FOOTER -->
       <footer class="page-footer">
         <div class="page-footer-container">
@@ -205,9 +182,11 @@
               </a>
               </li>
           </ul>
-          <p class="footer-contact">
-            <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </p>
+          <div class="footer-contact">
+            <p class="footer-contact-telephones">
+              <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </p>
+          </div>
           <a class="develop-link" href="htmlacademy.ru">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34" fill="none">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
